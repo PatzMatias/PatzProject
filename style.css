@@ -6,7 +6,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
-
+/*start of header*/
 .header{
 	background-color: #ffffff;
 	height: 90px;
@@ -30,10 +30,11 @@ body{
 #title{
 	float: left;
 	margin-left: -20px;
+	margin-top: 33px;
 	color: #666666;
 	font-family: 'Amaranth', sans-serif;
 	line-height: 0;
-	font-size: 36pt;
+	font-size: 40pt;
 	font-weight: 400;
 }
 
@@ -49,7 +50,7 @@ body{
 
 #nav li{
 	list-style-type: none;
-	width: 80px;
+	width: 70px;
 	height: 50px;
 	display: block;
 	float: left;
@@ -62,8 +63,9 @@ body{
 	color: #38a6a6;
 }
 
+/*end of header*/
 
-
+/*start of main content*/
 .main{
 	width: 960px;
 	margin: 0 auto;
@@ -71,18 +73,35 @@ body{
 }
 
 .slides{
-	width: 700px;
+	width: 693px;
 	height: 450px;
 	background-color: #ffffff;
 	float:left;
-	margin-right: 10px;
 	margin-bottom: 50px;
 	box-shadow: 0 1px 2px rgba(0,0,0,.6);
+	overflow: hidden;
+	margin-right: 10px;
 }
 
-.slides img{
-	width: 100%;
+.slides ul{
+	margin: 0;
+	width: 2079;
 	height: 100%;
+	position: relative;
+    list-style: none;
+	padding: 0;
+	float: left;
+}
+
+.slides ul li{
+	display:block;
+	  float: left;
+}
+
+
+.banner{
+	  width: 100%;
+	  height: 100%;
 }
 
 .buttons{
@@ -154,6 +173,9 @@ body{
 	border: 3px solid #ffffff;
 }
 
+/*end of main content*/
+
+/*start of footer*/
 .footer{
 	clear: both;
 	padding:; 15px;
@@ -183,7 +205,7 @@ body{
 .icon, .slice p{
 	float: left;
 	margin: 0 auto;
-	line-height: 1.25;
+	line-height: 1.30;
 }
 
 .slice p{
@@ -208,3 +230,10 @@ body{
 	padding-right: 5px;
 	padding-top: 5px;
 }
+
+/*end of footer*/
+
+/*start of slider button*/
+
+
+/*end of slider button*/
