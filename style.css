@@ -48,12 +48,13 @@ body{
 }
 
 #nav li{
-width: 80px;
-height: 50px;
-display: block;
-float: left;
-text-align: right;
-margin-right: 70px;
+	list-style-type: none;
+	width: 80px;
+	height: 50px;
+	display: block;
+	float: left;
+	text-align: right;
+	margin-right: 70px;
 }
 
 #nav li a, #nav li a:visited{
@@ -80,8 +81,8 @@ margin-right: 70px;
 }
 
 .slides img{
-width: 100%;
-height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .buttons{
@@ -141,42 +142,42 @@ height: 100%;
 
 
 #paragraph{
-height: 212px;
-width: 222px;
-padding: 10px;
-background-color: #38a6a6;
-float: left;
-color: #ffffff;
-font-size: 16px;
-font-family: 'Open Sans', sans-serif;
-font-weight: 700;
-border: 3px solid #ffffff;
+	height: 212px;
+	width: 222px;
+	padding: 10px;
+	background-color: #38a6a6;
+	float: left;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	border: 3px solid #ffffff;
 }
 
 .footer{
-clear: both;
-padding:; 15px;
-height: 146px;
-width: 100%;
-background-color: #000000;
-color: #ffffff;
-margin: 0 auto;
+	clear: both;
+	padding:; 15px;
+	height: 146px;
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+	margin: 0 auto;
 }
 
 #footcontainer{
-height: 140px;
-padding: 15px;
-width: 960px;
-margin: 0 auto;
+	height: 140px;
+	padding: 15px;
+	width: 960px;
+	margin: 0 auto;
 }
 
 .slice{
-width: 210px;
-height: auto;
-margin-top: 20px;
-margin-right: 28px;
-float:left;
-font-size: 14px;
+	width: 210px;
+	height: auto;
+	margin-top: 20px;
+	margin-right: 28px;
+	float:left;
+	font-size: 14px;
 }
 
 .icon, .slice p{
