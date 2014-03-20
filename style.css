@@ -56,6 +56,11 @@ text-align: right;
 margin-right: 70px;
 }
 
+#nav li a, #nav li a:visited{
+	text-decoration: none;
+	color: #38a6a6;
+}
+
 
 
 .main{
@@ -87,9 +92,9 @@ height: 100%;
 	margin-bottom: 50px;
 }
 
-#planning, #strategy, #results{
+.buttonstyle{
 	height: 45px;
-	width: 230px;
+	width: 232px;
 	margin-bottom: 10px;
 	float: left;
 	border: 3px solid #ffffff;
@@ -102,32 +107,38 @@ height: 100%;
 	background-image: -webkit-linear-gradient(top, rgba(255,255,255,.7), rgba(200,200,200,.1));
 }	
 
-#planning p, #strategy p, #results p{
-line-height: 0;
-margin-left: 10px;
+.buttonstyle p{
+	line-height: 0;
+	margin-left: 10px;
+	float:left;
+}
+.buttonstyle img{
+	float: right;
+	padding: 8px;
 }
 
-#planning, #strategy, #results, #paragraph{
-box-shadow: 0 1px 2px rgba(0,0,0,.6);
-border-radius: 2px;
-}
-
-#planning:hover, #strategy:hover, #results:hover{
-background-color: #000000;
-	background-image: -webkit-linear-gradient(top, rgba(255,255,255,.4), rgba(0,0,0,.1));
+.buttonstyle, #paragraph{
+	box-shadow: 0 1px 2px rgba(0,0,0,.6);
+	border-radius: 2px;
 }
 
 #planning{
-background-color: #f2ad30;
+	background-color: #f2ad30;
 }
 
 #strategy{
-background-color: #64ab26;
+	background-color: #64ab26;
 }
 
 #results{
-background-color: #38a6a6;
+	background-color: #38a6a6;
 }
+
+.buttonstyle:hover{
+	background-color: #000000;
+	background-image: -webkit-linear-gradient(top, rgba(125,125,125,1), rgba(0,0,0,1));
+}
+
 
 #paragraph{
 height: 212px;
@@ -149,6 +160,7 @@ height: 146px;
 width: 100%;
 background-color: #000000;
 color: #ffffff;
+margin: 0 auto;
 }
 
 #footcontainer{
@@ -159,15 +171,15 @@ margin: 0 auto;
 }
 
 .slice{
-width: 215px;
-height: 120px;
+width: 210px;
+height: auto;
 margin-top: 20px;
-margin-right: 25px;
+margin-right: 28px;
 float:left;
 font-size: 14px;
 }
 
-#icon, .slice p{
+.icon, .slice p{
 	float: left;
 	margin: 0 auto;
 	line-height: 1.25;
@@ -177,12 +189,12 @@ font-size: 14px;
 	padding: 5px;
 }
 
-#icon{
+.icon{
 	padding-top: 15px;
 	padding-right: 5px;
 }
 
-#icon img{
+.icon img{
 	margin: 0 auto;
 
 }
