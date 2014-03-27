@@ -23,11 +23,17 @@
 </div>
 <div class="main">
 		<div class="slides">
-		<ul>
+		<ul id="slidecontent">
 			<li><img class="banner" src="resources/banner1.jpg"/></li>
 			<li><img class="banner" src="resources/banner2.jpg"/></li>
 			<li><img class="banner" src="resources/banner3.jpg"/></li>
 		</ul>
+		<div class="slidenav">
+		<div class="slideNavwrap">
+		<a href="#" id="prev"><img src="resources/prev.png" /></a>
+		<a href="#" id="next"><img src="resources/next.png" /></a>
+		</div>
+		</div>
 		</div>
 		<div id="buttons">
 			<div class="buttonstyle" id="planning">
@@ -94,4 +100,52 @@
 </div>
 </div>
 </body>
+<script type="text/javascript">
+var counter=0;
+function moveImage(){
+if (!document.getElementById) return false;
+if (!document.getElementById("slidecontent")) return false;
+var elem = document.getElementById("slidecontent");
+if(counter===0){
+	elem.style.marginLeft = "-100%";
+	slideTimer();
+	counter++;
+}
+else if(counter===1){
+	elem.style.marginLeft = "-200%";
+	slideTimer();
+	counter++;
+}
+else if(counter===2){
+	elem.style.marginLeft = "0px";
+	slideTimer();
+	counter=0;
+}
+}
+
+function slideTimer() {
+	if (!document.getElementById) return false;
+	if (!document.getElementById("slidecontent")) return false;
+	var elem = document.getElementById("slidecontent");
+	movement = setTimeout("moveImage()",3000);
+}
+
+
+
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+	window.onload = func;
+} else {
+	window.onload = function() {
+	oldonload();
+	func();
+}
+}
+}
+
+
+addLoadEvent(slideTimer);
+
+</script>
 </html>
