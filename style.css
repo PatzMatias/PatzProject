@@ -113,7 +113,7 @@ body{
 }
 
 .slideNavwrap{
-	height: 450px;
+	height: auto;
 	width:  693px;
 	margin-top: 185px;
 }
@@ -130,11 +130,16 @@ body{
 	top: auto;
 }
 
-#play{
-	width: 20px;
-	height: 20px;
-	margin-bottom: auto;
-	margin-right: 10px;
+#plause{
+	position:absolute;
+	background-image: url('resources/play.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #ccccff;
+	right: 10px;
+	bottom: 0px;
+	width: 22px;
+	height: 22px;
 	padding: 5px;
 }
 

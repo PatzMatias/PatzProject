@@ -30,10 +30,14 @@
 		</ul>
 		<div class="slidenav">
 		<div class="slideNavwrap">
-		<a href="#" id="prev"><img src="resources/prev.png" /></a>
-		<a href="#" id="next"><img src="resources/next.png" /></a>
+		<a href="#" id="prev"onclick="left()" \><img src="resources/prev.png" /></a>
+		<a href="#" id="next" onclick="right()"><img src="resources/next.png" /></a>
 		</div>
+
+		<a href="#" onclick="pause()">
+		<div id="plause"></div>
 		</div>
+		</a>
 		</div>
 		<div id="buttons">
 			<div class="buttonstyle" id="planning">
@@ -54,6 +58,7 @@
 				</p>
 			</div>
 		</div>
+	</div>
 </div>
 
 <div class="footer">
@@ -101,35 +106,27 @@
 </div>
 </body>
 <script type="text/javascript">
-var counter=0;
+var counter=1;
+
+
 function moveImage(){
 if (!document.getElementById) return false;
 if (!document.getElementById("slidecontent")) return false;
 var elem = document.getElementById("slidecontent");
-if(counter===0){
-	elem.style.marginLeft = "-100%";
-	slideTimer();
+if(counter<=2){
+elem.style.marginLeft = -counter*100+"%";
+}
+else{
+elem.style.marginLeft = "0px";
+counter=0;
+}
 	counter++;
-}
-else if(counter===1){
-	elem.style.marginLeft = "-200%";
 	slideTimer();
-	counter++;
-}
-else if(counter===2){
-	elem.style.marginLeft = "0px";
-	slideTimer();
-	counter=0;
-}
 }
 
 function slideTimer() {
-	if (!document.getElementById) return false;
-	if (!document.getElementById("slidecontent")) return false;
-	var elem = document.getElementById("slidecontent");
 	movement = setTimeout("moveImage()",3000);
 }
-
 
 
 function addLoadEvent(func) {
@@ -143,6 +140,30 @@ function addLoadEvent(func) {
 }
 }
 }
+
+function right(){
+clearTimeout(movement);
+moveImage();
+}
+
+function left(){
+clearTimeout(movement);
+moveImage();
+}
+
+function pause(){
+clearTimeout(movement);
+var bg = document.getElementById("plause");
+bg.style.backgroundImage ="url('resources/pause.png')";
+bg.onClick(function(){
+var bg = document.getElementById("play");
+bg.style.backgroundImage = "url('resources/play.png')";
+slideTimer();
+bg.id="plause";
+});
+}
+
+
 
 
 addLoadEvent(slideTimer);
