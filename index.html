@@ -4,41 +4,46 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Amaranth:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Amaranth:400,700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="resources/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="slider.js"></script>
 </head>
 <body>
 <div id="body">
-<div class="header">
-<div id="headcontainer">
-<div id="logo"><img id="circles" src="resources/circles.png" alt="circles"><h2 id="title">Advisor & co.</h2></div>
-<div id="links">
-<ul id="nav">
-	<li><a href="#">HOME</a></li>
-	<li><a href="#">ABOUT</a></li>
-	<li><a href="#">SERVICE</a></li>
-	<li><a href="#">CLIENTS</a></li>
-</ul>
-</div>
-</div>
+	<div class="header">
+		<div id="headcontainer">
+			<div id="logo"><img id="circles" src="resources/circles.png" alt="circles"><h2 id="title">Advisor & co.</h2></div>
+			<div id="links">
+				<ul id="nav">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#">SERVICE</a></li>
+					<li><a href="#">CLIENTS</a></li>
+				</ul>
+		</div>
+	</div>
 
-</div>
+	</div>
 <div class="main">
-		<div class="slides">
-		<ul id="slidecontent">
-			<li><img class="banner" src="resources/banner1.jpg"/></li>
-			<li><img class="banner" src="resources/banner2.jpg"/></li>
-			<li><img class="banner" src="resources/banner3.jpg"/></li>
-		</ul>
-		<div class="slidenav">
-		<div class="slideNavwrap">
-		<a href="#" id="prev"onclick="left()" \><img src="resources/prev.png" /></a>
-		<a href="#" id="next" onclick="right()"><img src="resources/next.png" /></a>
-		</div>
+	<div class="slides">
+			<ul id="slidecontent">
+				<li><img class="banner" src="resources/banner1.jpg"/></li>
+				<li><img class="banner" src="resources/banner2.jpg"/></li>
+				<li><img class="banner" src="resources/banner3.jpg"/></li>
+			</ul>
+			
+			<div class="slidenav">
+			<div class="slideNavwrap">
+			<div id="prev" class="switcher"></div>
+			<div id="next" class="switcher"></div>
+			</div>
 
-		<a href="#" onclick="pause()">
-		<div id="plause"></div>
+		<div id="function">
+			<div id="plause"></div>
+			<div id="slidecount"><p>1 / 3</p></div>
 		</div>
-		</a>
-		</div>
+	</div>
+	</div>
 		<div id="buttons">
 			<div class="buttonstyle" id="planning">
 				<p>PLANNING</p><img src="resources/play2.png" />
@@ -104,69 +109,7 @@
 	</div>
 </div>
 </div>
+
 </body>
-<script type="text/javascript">
-var counter=1;
 
-
-function moveImage(){
-if (!document.getElementById) return false;
-if (!document.getElementById("slidecontent")) return false;
-var elem = document.getElementById("slidecontent");
-if(counter<=2){
-elem.style.marginLeft = -counter*100+"%";
-}
-else{
-elem.style.marginLeft = "0px";
-counter=0;
-}
-	counter++;
-	slideTimer();
-}
-
-function slideTimer() {
-	movement = setTimeout("moveImage()",3000);
-}
-
-
-function addLoadEvent(func) {
-	var oldonload = window.onload;
-	if (typeof window.onload != 'function') {
-	window.onload = func;
-} else {
-	window.onload = function() {
-	oldonload();
-	func();
-}
-}
-}
-
-function right(){
-clearTimeout(movement);
-moveImage();
-}
-
-function left(){
-clearTimeout(movement);
-moveImage();
-}
-
-function pause(){
-clearTimeout(movement);
-var bg = document.getElementById("plause");
-bg.style.backgroundImage ="url('resources/pause.png')";
-bg.onClick(function(){
-var bg = document.getElementById("play");
-bg.style.backgroundImage = "url('resources/play.png')";
-slideTimer();
-bg.id="plause";
-});
-}
-
-
-
-
-addLoadEvent(slideTimer);
-
-</script>
 </html>

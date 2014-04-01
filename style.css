@@ -90,18 +90,18 @@ body{
     list-style: none;
 	padding: 0;
 	margin-top: 0;
-	margin-left: 0;
+	margin-left: 0px;
 	float: left;
 }
 
 #slidecontent li{
-	display:block;
-	  float: left;
+	width: 693px;
+	float: left;
 }
 
 
 .banner{
-	  width: 100%;
+	  width: 693px;
 	  height: 100%;
 }
 
@@ -110,6 +110,11 @@ body{
 	height: 450px;
 	position: absolute;
 	display: block;
+	opacity: 1;
+}
+
+.slidenav:hover{
+	opacity: 1;
 }
 
 .slideNavwrap{
@@ -118,29 +123,68 @@ body{
 	margin-top: 185px;
 }
 
+.switcher{
+	width: 48px;
+	height: 70px;
+	top: auto;
+	opacity: 0.4;
+}
+
+.switcher:hover{
+	opacity: 0.8;
+}
+
 #prev{
 	float: left;
-	margin-left: 25px;
-	top: auto;
+	margin-left: 16px;
+	background: url('resources/arrows_white_new3.png') 100px 0px;
 }
 
 #next{
 	float: right;
-	margin-right: 25px;
-	top: auto;
+	margin-right: 15px;
+	background: url('resources/arrows_white_new3.png') -50px 0px;
+}
+
+#function{
+	position:absolute;
+	right: 0px;
+	bottom: 10px;
+	height: 20px;
+	width: 85px;
+	padding: 0;
+	opacity: 0.4;
+}
+
+#function:hover{
+	opacity: 0.8;
 }
 
 #plause{
-	position:absolute;
-	background-image: url('resources/play.png');
+	background-image: url('resources/pause.png');
 	background-position: center;
 	background-repeat: no-repeat;
-	background-color: #ccccff;
-	right: 10px;
-	bottom: 0px;
-	width: 22px;
-	height: 22px;
+	background-color: #cceeff;
+	width: 20px;
+	height: 20px;
 	padding: 5px;
+	margin-right: 2px;
+	float: left;
+}
+
+#slidecount{
+	width: 35px;
+	height: 20px;
+	background-color: #cceeff;
+	float: right;
+	padding: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+#slidecount p{
+	font-weight: bold;
+	margin: 0 auto;
 }
 
 .buttons{
