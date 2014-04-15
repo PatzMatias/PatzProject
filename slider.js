@@ -80,22 +80,26 @@ $('#next').click(function(){right();	});
 	}
 	
 	$('#plause').click(function(){
-	if(clicks==1){
-	$('#plause').css({"background-image":"url('resources/play.png')"});
-	clicks++;
-	stopSlider();
-	}
-	else if(clicks==2){
-	$('#plause').css({"background-image":"url('resources/pause.png')"});
-	clicks--;
-	stopSlider();
-	startSlider();
-	}
+		if(clicks==1){
+			$('#plause').css({"background-image":"url('resources/play.png')"});
+			clicks++;
+			stopSlider();
+		}
+		else if(clicks==2){
+			$('#plause').css({"background-image":"url('resources/pause.png')"});
+			clicks--;
+			stopSlider();
+			startSlider();
+		}
 	});
 	
-	$('.slidenav').mouseover(function(){stopSlider();});
-	$('.slidenav').mouseout(function(){stopSlider(); startSlider();});
-	
-	
-	
+	$('.slidenav').hover(
+		function(){
+		stopSlider();
+		},
+		function(){
+		stopSlider();
+		startSlider();	
+		}
+	);
 });
